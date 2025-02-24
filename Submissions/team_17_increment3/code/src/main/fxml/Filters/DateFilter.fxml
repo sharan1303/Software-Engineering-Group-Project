@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import org.kordamp.ikonli.javafx.*?>
+
+<AnchorPane prefHeight="200.0" prefWidth="326.0" stylesheets="@../../css/Global.css" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="uk.ac.soton.git.comp2211g17.viewmodel.filters.DateFilterViewModel">
+    <children>
+        <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" text="Date range" AnchorPane.leftAnchor="7.0" AnchorPane.topAnchor="7.0">
+            <graphic>
+                <FontIcon iconLiteral="eva-calendar-outline" styleClass="textBlue" />
+            </graphic>
+         <styleClass>
+            <String fx:value="title" />
+            <String fx:value="textFillBlue" />
+         </styleClass>
+        </Label>
+        <Text layoutX="26.0" layoutY="93.0" style="-fx-font-weight: bold;" styleClass="textBlue" text="Start date" AnchorPane.leftAnchor="26.0" AnchorPane.topAnchor="80.0" />
+        <TextField fx:id="startDate" layoutX="150.0" layoutY="70.0" prefWidth="91" styleClass="text-field-blue" text="Start of campaign" AnchorPane.leftAnchor="170.0" AnchorPane.rightAnchor="65.0" AnchorPane.topAnchor="70.0" />
+        <Text layoutX="28.0" layoutY="158.0" style="-fx-font-weight: bold;" styleClass="textBlue" text="End date" AnchorPane.bottomAnchor="39.2578125" AnchorPane.leftAnchor="28.0" />
+        <Button layoutX="108.0" layoutY="70.0" onAction="#pickStartDate" prefHeight="37.0" prefWidth="37.0" styleClass="whiteButton" text="" AnchorPane.leftAnchor="120.0" AnchorPane.topAnchor="70.0">
+            <graphic>
+                <FontIcon iconLiteral="eva-edit-outline" styleClass="textBlue" />
+            </graphic>
+        </Button>
+        <TextField fx:id="endDate" layoutX="150.0" layoutY="135.0" prefWidth="91" styleClass="text-field-blue" text="End of campaign" AnchorPane.leftAnchor="170.0" AnchorPane.rightAnchor="65.0" AnchorPane.topAnchor="135.0" />
+      <Button layoutX="249.0" layoutY="68.0" onAction="#infiniteStartDate" prefHeight="37.0" prefWidth="37.0" styleClass="whiteButton" text="" AnchorPane.rightAnchor="14.0">
+         <graphic>
+             <FontIcon iconLiteral="eva-skip-back" styleClass="textBlue" />
+         </graphic>
+      </Button>
+      <Button layoutX="249.0" layoutY="133.0" onAction="#infiniteEndDate" prefHeight="37.0" prefWidth="37.0" styleClass="whiteButton" text="" AnchorPane.rightAnchor="14.0">
+         <graphic>
+            <FontIcon iconLiteral="eva-skip-forward" styleClass="textBlue" />
+         </graphic>
+      </Button>
+        <Button layoutX="90.0" layoutY="135.0" onAction="#pickEndDate" prefHeight="37.0" prefWidth="37.0" styleClass="whiteButton" text="" AnchorPane.bottomAnchor="28.0" AnchorPane.leftAnchor="120.0">
+            <graphic>
+                <FontIcon iconLiteral="eva-edit-outline" styleClass="textBlue" />
+            </graphic>
+        </Button>
+    </children>
+</AnchorPane>

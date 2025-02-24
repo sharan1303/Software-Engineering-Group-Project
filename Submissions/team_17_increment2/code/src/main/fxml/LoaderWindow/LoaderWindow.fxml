@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Text?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+<?import uk.ac.soton.git.comp2211g17.view.components.FileSelectorGroup?>
+<?import java.net.URL?>
+<BorderPane fx:id="container" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="uk.ac.soton.git.comp2211g17.view.loader.LoaderWindow">
+   <center>
+       <AnchorPane prefHeight="400.0" prefWidth="600.0" styleClass="whiteBG">
+           <stylesheets>
+               <URL value="@../../css/MainWindow/MainWindowStyle.css"/>
+               <URL value="@../../css/Global.css"/>
+           </stylesheets>
+           <BorderPane prefHeight="400.0" prefWidth="600.0" styleClass="mainPane" AnchorPane.bottomAnchor="0.0"
+                       AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <top>
+                  <Text fx:id="titleText" styleClass="titleTextStyles, textWhite" text="Load Campaign"
+                        textAlignment="CENTER" BorderPane.alignment="CENTER">
+                      <BorderPane.margin>
+                          <Insets bottom="15.0" left="15.0" right="15.0" top="15.0"/>
+                      </BorderPane.margin>
+                  </Text>
+
+              </top>
+              <bottom>
+                  <GridPane prefHeight="100.0" prefWidth="600.0" BorderPane.alignment="CENTER" styleClass="whiteBG">
+                      <columnConstraints>
+                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                      </columnConstraints>
+                      <rowConstraints>
+                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                      </rowConstraints>
+                      <children>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="47.0" prefWidth="598.0"
+                                      GridPane.rowIndex="1">
+                              <children>
+                                  <VBox alignment="CENTER" layoutY="14.0" prefHeight="26.0" prefWidth="600.0"
+                                        AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                                        AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                      <children>
+                                          <Button mnemonicParsing="false" onAction="#loadCampaign"
+                                                  styleClass="blueButton" text="Load campaign"/>
+                                      </children>
+                                  </VBox>
+                              </children>
+                          </AnchorPane>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="38.0" prefWidth="598.0">
+                              <VBox alignment="CENTER" layoutX="432.0" layoutY="-1.0" AnchorPane.bottomAnchor="0.0"
+                                    AnchorPane.rightAnchor="110.0" AnchorPane.topAnchor="0.0" styleClass="smallMargin">
+                                  <Button fx:id="removeButton" disable="true" mnemonicParsing="false"
+                                          onAction="#removeLast" styleClass="whiteButton" text="Remove last">
+                                      <graphic>
+                                          <FontIcon iconLiteral="eva-minus"/>
+                                      </graphic>
+                                  </Button>
+                              </VBox>
+                              <VBox alignment="CENTER" layoutX="14.0" layoutY="9.0" AnchorPane.bottomAnchor="0.0"
+                                    AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="0.0">
+                                  <Button mnemonicParsing="false" onAction="#loadFromDB" styleClass="whiteButton"
+                                          text="Load from existing database"/>
+                              </VBox>
+                              <VBox alignment="CENTER" layoutX="514.0" layoutY="10.0" AnchorPane.bottomAnchor="0.0"
+                                    AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="0.0">
+                                  <Button mnemonicParsing="false" onAction="#addMore" styleClass="whiteButton"
+                                          text="Add more">
+                                      <graphic>
+                                          <FontIcon iconLiteral="eva-plus"/>
+                                      </graphic>
+                                  </Button>
+                              </VBox>
+                          </AnchorPane>
+                      </children>
+                  </GridPane>
+              </bottom>
+              <center>
+                  <ScrollPane fitToWidth="true" hbarPolicy="NEVER" prefHeight="200.0" prefWidth="600.0"
+                              styleClass="whiteBG" BorderPane.alignment="CENTER">
+                      <VBox fx:id="fileChoosersContainer" alignment="CENTER" styleClass="whiteBG">
+                          <FileSelectorGroup defaultValue="CLICK_LOG"/>
+                          <FileSelectorGroup defaultValue="IMPRESSION_LOG"/>
+                          <FileSelectorGroup defaultValue="SERVER_LOG"/>
+                      </VBox>
+                  </ScrollPane>
+              </center>
+           </BorderPane>
+       </AnchorPane>
+   </center>
+</BorderPane>

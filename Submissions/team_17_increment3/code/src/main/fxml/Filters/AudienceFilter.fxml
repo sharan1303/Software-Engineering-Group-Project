@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import org.controlsfx.control.*?>
+<?import org.kordamp.ikonli.javafx.*?>
+
+<?import uk.ac.soton.git.comp2211g17.view.components.filters.AudienceFilterComponent?>
+<AnchorPane stylesheets="@../../css/Global.css" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="uk.ac.soton.git.comp2211g17.viewmodel.filters.AudienceFilterViewModel">
+    <children>
+        <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" styleClass="title, textFillBlue" text="Filter audience" AnchorPane.leftAnchor="7.0" AnchorPane.topAnchor="7.0">
+            <graphic>
+                <FontIcon iconLiteral="eva-person-outline" styleClass="textBlue" />
+            </graphic>
+        </Label>
+      <VBox layoutX="105.0" layoutY="82.0" prefHeight="148.0" prefWidth="286.0" AnchorPane.topAnchor="38.0" AnchorPane.bottomAnchor="7.0" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="7.0">
+         <children>
+             <AudienceFilterComponent fx:id="ageComponent" title="Age" VBox.vgrow="ALWAYS" />
+             <AudienceFilterComponent fx:id="genderComponent" title="Gender" VBox.vgrow="ALWAYS" />
+             <AudienceFilterComponent fx:id="incomeComponent" title="Income" VBox.vgrow="ALWAYS" />
+         </children>
+      </VBox>
+
+    </children>
+</AnchorPane>

@@ -1,0 +1,7 @@
+.bg-white {
+	-fx-background-color: white;
+}
+
+.bg-white .viewport {
+	-fx-background-color: white;
+}

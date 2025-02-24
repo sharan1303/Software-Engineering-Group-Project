@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.*?>
+<?import uk.ac.soton.git.comp2211g17.view.components.graph.TimeGraph?>
+<fx:root xmlns="http://javafx.com/javafx"
+         xmlns:fx="http://javafx.com/fxml"
+         fx:controller="uk.ac.soton.git.comp2211g17.view.components.graph.DuoGraph" type="VBox">
+	<fx:define>
+		<TimeGraph fx:id="combinedGraph" title="${controller.titleCombined}"
+				   xlabel="${controller.xlabelCombined}" ylabel="${controller.ylabelCombined}"
+				   data="${controller.dataCombined}" formatter="${controller.formatter}" HBox.hgrow="ALWAYS"/>
+	</fx:define>
+	<HBox fx:id="graphBox">
+		<TimeGraph fx:id="firstGraph" title="${controller.titleLeft}"
+				   xlabel="${controller.xlabelLeft}" ylabel="${controller.ylabelLeft}"
+				   data="${controller.dataLeftInternal}" formatter="${controller.formatter}" HBox.hgrow="ALWAYS"/>
+		<TimeGraph fx:id="secondGraph" title="${controller.titleRight}"
+				   xlabel="${controller.xlabelRight}" ylabel="${controller.ylabelRight}"
+				   data="${controller.dataRightInternal}" formatter="${controller.formatter}" HBox.hgrow="ALWAYS"/>
+	</HBox>
+	<HBox>
+		<Region HBox.hgrow="ALWAYS"/>
+		<Button text="${controller.viewToggleText}" onAction="#toggleMode" styleClass="blueButton, print-hidden"/>
+		<Region HBox.hgrow="ALWAYS"/>
+	</HBox>
+</fx:root>

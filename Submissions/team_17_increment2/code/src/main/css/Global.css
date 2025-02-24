@@ -1,0 +1,211 @@
+.root * {
+    -fx-font-family: "Poppins";
+}
+
+.ikonli-font-icon {
+	-fx-icon-color: rgba(63, 160, 251, 1);
+    -fx-icon-size: 16;
+}
+
+.whiteButton {
+    -fx-background-color: white;
+    -fx-background-radius: 20px;
+    -fx-border-insets: 0;
+    -fx-text-fill: rgba(63, 160, 251, 1);
+    -fx-padding: 10px;
+
+    -fx-border-width: 2px;
+    -fx-border-color: rgba(63, 160, 251, 1);
+    -fx-border-radius: 20px;
+
+
+}
+
+.whiteButton :hover {
+
+    -fx-border-width: 5px;
+    -fx-border-color: green;
+    -fx-border-radius: 20px;
+
+}
+.blueButton {
+    -fx-background-color: rgba(63, 160, 251, 1);
+    -fx-background-radius: 20px;
+    -fx-border-insets: 0;
+    -fx-text-fill: white;
+    -fx-padding: 10px;
+    -fx-border-width: 2px;
+    -fx-border-color: white;
+    -fx-border-radius: 20px;
+}
+
+.blueButton :hover {
+
+    -fx-border-width: 5px;
+    -fx-border-color: green;
+    -fx-border-radius: 20px;
+
+}
+
+.blueButton .ikonli-font-icon {
+	-fx-icon-color: white;
+}
+
+.whiteBG {
+    -fx-background-color: white;
+}
+
+.table-view {
+    -fx-background-color: transparent;
+}
+
+.table-view .column-header-background .filler {
+    -fx-background-color: transparent;
+}
+
+.table-view .corner {
+    -fx-background-color: transparent;
+}
+
+.table-view .column-header-background{
+    -fx-background-color: white;
+    -fx-border-width: 2px;
+    -fx-border-color: rgba(63, 160, 251, 1);
+    -fx-border-radius: 20px;
+
+}
+
+.table-view .column-header {
+    -fx-background-color: white;
+    -fx-padding: 10px;
+}
+
+
+.scroll-pane > .viewport {
+    -fx-background-color: white;
+}
+
+.smallMargin {
+    -fx-padding: 10px;
+    -fx-border-insets: 10px;
+    -fx-background-insets: 10px;
+}
+
+.largeMargin {
+    -fx-padding: 20px;
+    -fx-border-insets: 20px;
+    -fx-background-insets: 20px;
+}
+
+.card {
+    -fx-background-color: white;
+    -fx-background-radius: 20px;
+    -fx-text-fill: rgba(63, 160, 251, 1);
+    -fx-border-width: 2px;
+    -fx-border-color: rgba(63, 160, 251, 1);
+    -fx-border-radius: 20px;
+    -fx-padding: 20px;
+}
+
+.choice-box {
+    -fx-background-color: white;
+    -fx-background-radius: 20px;
+    -fx-text-fill: rgba(63, 160, 251, 1);
+
+    -fx-border-width: 2px;
+    -fx-border-color: rgba(63, 160, 251, 1);
+    -fx-border-radius: 20px;
+}
+
+.choice-box .label {
+    -fx-textc-fill: rgba(63, 160, 251, 1);
+}
+
+.choice-box .context-menu {
+    -fx-background-radius: 20px;
+    -fx-padding: 5, 20, 5, 20;
+    -fx-background-color: white;
+}
+
+.choice-box .menu-item:focused {
+    -fx-background-color: rgba(63, 160, 251, 1);
+    -fx-padding: 5;
+    -fx-background-radius: 20px;
+}
+
+.choice-box .menu-item > .label {
+    -fx-text-fill: rgba(63, 160, 251, 1);
+}
+
+.choice-box .menu-item:focused > .label {
+    -fx-text-fill: white;
+}
+
+.text-field {
+    -fx-background-color: white;
+    -fx-padding: 10;
+    -fx-background-radius: 20 ;
+}
+
+.text-field-blue {
+    -fx-background-color: rgba(63, 160, 251, 1);
+    -fx-text-fill: white;
+}
+
+.title{
+    -fx-font-weight: bold;
+    -fx-font-size: 24;
+    -fx-text-fill: rgba(63, 160, 251, 1);
+}
+
+.subtitle{
+    -fx-font-weight: bold;
+    -fx-font-size: 18;
+    -fx-text-fill: rgba(63, 160, 251, 1);
+}
+
+.grid-pane {
+    -fx-border-color: rgba(63, 160, 251, 1);
+    -fx-border-radius: 5.0;
+    -fx-border-width: 2.0;
+
+    -fx-hgap: 10px;
+    -fx-vgap: 10px;
+    -fx-padding: 10px;
+}
+
+.textWhite{
+    -fx-fill: white;
+}
+
+.slider .track {
+    -fx-control-inner-background: rgba(63, 160, 251, 1);
+    -fx-background-radius: 0;
+}
+.slider .thumb {
+    -fx-background-color: white;
+    -fx-border-color: rgba(63, 160, 251, 1);
+    -fx-border-width: 3.0;
+    -fx-pref-width: 15.0;
+    -fx-pref-height: 15.0;
+    -fx-border-radius: 7.5;
+}
+
+.table-view .column-header-background .filler{
+    -fx-border-radius: 10;
+    -fx-border-color: rgba(63, 160, 251, 1);
+    -fx-border-width: 2px;
+    -fx-background-color: white;
+}
+
+.textBlue{
+    -fx-fill: rgba(63,160,251,1);
+}
+
+.textFillWhite{
+    -fx-text-fill: white;
+}
+
+.textFillBlue{
+    -fx-text-fill: rgba(63,160,251,1);
+}

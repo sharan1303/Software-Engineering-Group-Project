@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.layout.*?>
+<?import uk.ac.soton.git.comp2211g17.view.components.async.FutureIndicatorContainer?>
+<?import uk.ac.soton.git.comp2211g17.view.components.graph.DuoGraph?>
+<?import uk.ac.soton.git.comp2211g17.view.components.*?>
+<Navigation.Page xmlns="http://javafx.com/javafx"
+                 xmlns:fx="http://javafx.com/fxml"
+                 path="side-by-side"
+                 fx:controller="uk.ac.soton.git.comp2211g17.view.main.SideBySidePage"
+                 fx:id="root"
+                 title="Side by Side">
+	<VBox>
+        <FutureIndicatorContainer indicator="${controller.futureIndicator}">
+            <DuoGraph dataLeft="${controller.timeGraphViewModelLeft.data}" titleLeft="${controller.metricLeft.name}"
+                      xlabelLeft="${controller.timeGraphViewModelLeft.xlabel}"
+                      ylabelLeft="${controller.timeGraphViewModelLeft.ylabel}"
+                      dataRight="${controller.timeGraphViewModelRight.data}" titleRight="${controller.metricRight.name}"
+                      xlabelRight="${controller.timeGraphViewModelRight.xlabel}"
+                      ylabelRight="${controller.timeGraphViewModelRight.ylabel}"/>
+        </FutureIndicatorContainer>
+		<HBox styleClass="print-hidden">
+			<Region HBox.hgrow="ALWAYS"/>
+			<ChoiceBox fx:id="keyMetricsDropdownLeft" prefWidth="150.0" items="${controller.metricList}"/>
+			<Region HBox.hgrow="ALWAYS"/>
+			<ChoiceBox fx:id="keyMetricsDropdownRight" prefWidth="150.0" items="${controller.metricList}"/>
+			<Region HBox.hgrow="ALWAYS"/>
+		</HBox>
+		<fx:include source="../TimeGranularity.fxml" fx:id="timeGranularity"/>
+		<fx:include source="../Filters/DuoFilterGroup.fxml" fx:id="filterGroup"/>
+	</VBox>
+</Navigation.Page>

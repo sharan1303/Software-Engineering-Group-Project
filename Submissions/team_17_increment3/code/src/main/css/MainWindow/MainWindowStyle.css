@@ -1,0 +1,211 @@
+.mainPane{
+    -fx-background-color: rgba(63,160,251,1);
+    -fx-background-radius: 0;
+    -fx-background-insets: 0;
+}
+
+.centreBox{
+    -fx-background-color: white;
+    -fx-background-radius: 20px 0 0 0;
+    -fx-background-insets: 0;
+    -fx-padding: 10px;
+}
+
+.appBar{
+    -fx-spacing: 5px;
+    -fx-padding: 10px;
+}
+
+.sidePane{
+    -fx-spacing: 5px;
+    -fx-padding: 10px;
+}
+
+.titleTextStyles{
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+}
+
+.textWhite{
+    -fx-fill: white;
+}
+
+.textBlue{
+    -fx-fill: rgba(63,160,251,1);
+}
+
+.textFillWhite{
+    -fx-text-fill: white;
+}
+
+.textFillBlue{
+    -fx-text-fill: rgba(63,160,251,1);
+}
+
+.hbox{
+    -fx-spacing: 10;
+    -fx-alignment: centre;
+}
+
+#contentsNavigation:print .print-hidden {
+    visibility: hidden;
+}
+
+.elegant.mainPane{
+    -fx-background-color: rgba(50, 50, 50, 1);
+    -fx-background-radius: 0;
+    -fx-background-insets: 0;
+}
+
+.elegant .centreBox{
+    -fx-background-color: rgba(220, 220, 220, 1);
+    -fx-background-radius: 20px 0 0 0;
+    -fx-background-insets: 0;
+    -fx-padding: 10px;
+}
+
+.elegant .appBar{
+    -fx-spacing: 5px;
+    -fx-padding: 10px;
+}
+
+.elegant .sidePane{
+    -fx-spacing: 5px;
+    -fx-padding: 10px;
+}
+
+.elegant .titleTextStyles{
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+}
+
+.elegant .textWhite{
+    -fx-fill: rgba(220, 220, 220, 1);
+}
+
+.elegant .textBlue{
+    -fx-fill: rgba(50, 50, 50, 1);
+}
+
+.elegant .textFillWhite{
+    -fx-text-fill: rgba(220, 220, 220, 1);
+}
+
+.elegant .textFillBlue{
+    -fx-text-fill: rgba(50, 50, 50, 1);
+}
+
+.elegant .hbox{
+    -fx-spacing: 10;
+    -fx-alignment: CENTRE;
+}
+
+#contentsNavigation:print .print-hidden {
+    visibility: hidden;
+}
+
+.corporate.mainPane{
+    -fx-background-color: rgba(188, 184, 174, 1);
+    -fx-background-radius: 0;
+    -fx-background-insets: 0;
+}
+
+.corporate .centreBox{
+    -fx-background-color: white;
+    -fx-background-radius: 20px 0 0 0;
+    -fx-background-insets: 0;
+    -fx-padding: 10px;
+}
+
+.corporate .appBar{
+    -fx-spacing: 5px;
+    -fx-padding: 10px;
+}
+
+.corporate .sidePane{
+    -fx-spacing: 5px;
+    -fx-padding: 10px;
+}
+
+.corporate .titleTextStyles{
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+}
+
+.corporate .textWhite{
+    -fx-fill: white;
+}
+
+.corporate .textBlue{
+    -fx-fill: rgba(188, 184, 174, 1);
+}
+
+.corporate .textFillWhite{
+    -fx-text-fill: white;
+}
+
+.corporate .textFillBlue{
+    -fx-text-fill: rgba(188, 184, 174, 1);
+}
+
+.corporate .hbox{
+    -fx-spacing: 10;
+    -fx-alignment: CENTRE;
+}
+
+#contentsNavigation:print .print-hidden {
+    visibility: hidden;
+}
+
+.retro.mainPane{
+    -fx-background-color: rgba(88, 32, 72, 1);
+    -fx-background-radius: 0;
+    -fx-background-insets: 0;
+}
+
+.retro .centreBox{
+    -fx-background-color: white;
+    -fx-background-radius: 20px 0 0 0;
+    -fx-background-insets: 0;
+    -fx-padding: 10px;
+}
+
+.retro .appBar{
+    -fx-spacing: 5px;
+    -fx-padding: 10px;
+}
+
+.retro .sidePane{
+    -fx-spacing: 5px;
+    -fx-padding: 10px;
+}
+
+.retro .titleTextStyles{
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+}
+
+.retro .textWhite{
+    -fx-fill: white;
+}
+
+.retro .textBlue{
+    -fx-fill: rgba(88, 32, 72, 1);
+}
+
+.retro .textFillWhite{
+    -fx-text-fill: white;
+}
+
+.retro .textFillBlue{
+    -fx-text-fill: rgba(88, 32, 72, 1);
+}
+
+.retro .hbox{
+    -fx-spacing: 10;
+    -fx-alignment: CENTRE;
+}
+
+#contentsNavigation:print .print-hidden {
+    visibility: hidden;
+}

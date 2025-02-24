@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="container" prefHeight="146.0" prefWidth="505.0" styleClass="print-hidden" stylesheets="@../css/Global.css" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="uk.ac.soton.git.comp2211g17.viewmodel.filters.TimeGranularityViewModel">
+   <VBox layoutY="-1.0" prefHeight="144.0" prefWidth="505.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+      <BorderPane prefHeight="58.0" prefWidth="472.0">
+         <center>
+            <Label alignment="CENTER" styleClass="title" text="Time Granularity" BorderPane.alignment="CENTER_LEFT" />
+         </center>
+         <right>
+            <TextField fx:id="change" alignment="CENTER" styleClass="whiteButton" text="1 hour" BorderPane.alignment="CENTER_RIGHT">
+               <HBox.margin>
+                  <Insets right="5.0" top="5.0" />
+               </HBox.margin>
+            </TextField>
+         </right>
+      </BorderPane>
+      <HBox prefHeight="38.0" prefWidth="506.0">
+         <Label prefHeight="18.0" prefWidth="57.0" text="1 Minute">
+            <HBox.margin>
+               <Insets left="10.0" top="5.0" />
+            </HBox.margin></Label>
+         <Region prefHeight="28.0" prefWidth="26.0" HBox.hgrow="ALWAYS" />
+         <Label text="1 Hour">
+            <HBox.margin>
+               <Insets top="5.0" />
+            </HBox.margin></Label>
+         <Region prefHeight="28.0" prefWidth="59.0" HBox.hgrow="ALWAYS" />
+         <Label text="1 Day">
+            <HBox.margin>
+               <Insets top="5.0" />
+            </HBox.margin>
+         </Label>
+         <Region prefHeight="28.0" prefWidth="73.0" HBox.hgrow="ALWAYS" />
+         <Label text="1 Week">
+            <HBox.margin>
+               <Insets top="5.0" />
+            </HBox.margin>
+         </Label>
+         <Region prefHeight="28.0" prefWidth="47.0" />
+         <Label text="1 Month">
+            <HBox.margin>
+               <Insets right="10.0" top="5.0" />
+            </HBox.margin></Label>
+      </HBox>
+      <Slider fx:id="slider" majorTickUnit="25.0" minorTickCount="0" prefHeight="79.0" prefWidth="482.0" showTickLabels="false" showTickMarks="true" snapToTicks="true" styleClass="slider" value="25.0" VBox.vgrow="ALWAYS">
+      </Slider>
+   </VBox>
+</AnchorPane>

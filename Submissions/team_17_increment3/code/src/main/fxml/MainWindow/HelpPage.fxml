@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import uk.ac.soton.git.comp2211g17.view.components.*?>
+<?import java.net.URL?>
+<Navigation.Page xmlns="http://javafx.com/javafx"
+                 xmlns:fx="http://javafx.com/fxml"
+                 path="help"
+                 fx:controller="uk.ac.soton.git.comp2211g17.view.main.HelpPageView"
+                 fx:id="root"
+                 title="Help Page">
+
+    <AnchorPane xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1">
+        <stylesheets>
+            <URL value="@../../css/MainWindow/MainWindowStyle.css" />
+            <URL value="@../../css/Global.css" />
+        </stylesheets>
+        <children>
+            <BorderPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                <top>
+                    <BorderPane>
+                        <center>
+                            <Label styleClass="title" text="Help Page" BorderPane.alignment="TOP_LEFT">
+                                <BorderPane.margin>
+                                    <Insets left="10.0" top="10.0" />
+                                </BorderPane.margin>
+                                <VBox.margin>
+                                    <Insets left="10.0" top="10.0" />
+                                </VBox.margin>
+                            </Label>
+                        </center>
+                        <right>
+                            <Button text="Open User Guide" styleClass="whiteButton" onAction="#openUserGuide">
+                                <BorderPane.margin>
+                                    <Insets topRightBottomLeft="5"/>
+                                </BorderPane.margin>
+                            </Button>
+                        </right>
+                    </BorderPane>
+                </top>
+                <center>
+                    <VBox>
+                        <TableView fx:id="table" VBox.vgrow="ALWAYS">
+                            <columns>
+                                <TableColumn fx:id="term" text="Term" />
+                                <TableColumn fx:id="definition" text="Definition" />
+                            </columns>
+                            <BorderPane.margin>
+                                <Insets left="10.0" right="10.0" top="10.0" />
+                            </BorderPane.margin>
+                        </TableView>
+                    </VBox>
+                </center>
+            </BorderPane>
+        </children>
+    </AnchorPane>
+
+
+</Navigation.Page>

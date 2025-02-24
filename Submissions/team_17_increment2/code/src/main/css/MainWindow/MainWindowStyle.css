@@ -1,0 +1,49 @@
+.mainPane{
+    -fx-background-color: rgba(63,160,251,1);
+    -fx-background-radius: 0;
+    -fx-background-insets: 0;
+}
+
+.centreBox{
+    -fx-background-color: white;
+    -fx-background-radius: 20px 0 0 0;
+    -fx-background-insets: 0;
+    -fx-padding: 10px;
+}
+
+.appBar{
+    -fx-spacing: 5px;
+    -fx-padding: 10px;
+}
+
+.sidePane{
+    -fx-spacing: 5px;
+    -fx-padding: 10px;
+}
+
+.titleTextStyles{
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+}
+
+.textWhite{
+    -fx-fill: white;
+}
+
+.textBlue{
+    -fx-fill: rgba(63,160,251,1);
+}
+
+.textFillWhite{
+    -fx-text-fill: white;
+}
+
+.textFillBlue{
+    -fx-text-fill: rgba(63,160,251,1);
+}
+
+.hbox{
+    -fx-spacing: 10;
+    -fx-alignment: CENTRE;
+}
+

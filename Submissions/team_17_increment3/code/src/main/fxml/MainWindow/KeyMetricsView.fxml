@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+<?import uk.ac.soton.git.comp2211g17.view.components.async.FutureIndicatorContainer?>
+<?import uk.ac.soton.git.comp2211g17.view.components.graph.TimeGraph?>
+<?import java.net.URL?>
+<HBox xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="uk.ac.soton.git.comp2211g17.view.main.KeyMetricsView">
+    <stylesheets>
+        <URL value="@../../css/MainWindow/MainWindowStyle.css"/>
+        <URL value="@../../css/Global.css"/>
+    </stylesheets>
+    <!--   the drag graphic goes here-->
+    <VBox HBox.hgrow="ALWAYS" styleClass="smallMargin, card">
+        <HBox>
+            <FutureIndicatorContainer indicator="${controller.keyMetricsViewModel.timeGraphViewModel.futureIndicator}">
+                <TimeGraph data="${controller.keyMetricsViewModel.timeGraphViewModel.data}"
+                           title="${controller.metric.name}"
+                           xlabel="${controller.keyMetricsViewModel.timeGraphViewModel.xlabel}"
+                           ylabel="${controller.keyMetricsViewModel.timeGraphViewModel.ylabel}" fx:id="chart"
+                           HBox.hgrow="ALWAYS"
+                           styleClass="largeMargin"/>
+            </FutureIndicatorContainer>
+            <VBox styleClass="largeMargin">
+                <BorderPane>
+                    <right>
+                        <Button mnemonicParsing="false" onAction="#removeSelf" styleClass="whiteButton">
+                            <graphic>
+                                <FontIcon iconLiteral="eva-minus"/>
+                            </graphic>
+                        </Button>
+                    </right>
+                </BorderPane>
+                <FutureIndicatorContainer indicator="${controller.keyMetricsViewModel.futureIndicator}">
+                    <GridPane styleClass="smallMargin" VBox.vgrow="ALWAYS">
+                        <Label text="${controller.metric.name}" styleClass="title" GridPane.rowIndex="0"
+                               GridPane.columnIndex="0"/>
+                        <Label text="${controller.keyMetricsViewModel.metricValue}" styleClass="title" GridPane.rowIndex="1"
+                               GridPane.columnIndex="0"/>
+                    </GridPane>
+                </FutureIndicatorContainer>
+                <BorderPane>
+                    <right>
+                        <VBox styleClass="smallMargin" spacing="10">
+                            <Button mnemonicParsing="false" onAction="#openDetail" styleClass="whiteButton"
+                                    text="Open Detail">
+                                <graphic>
+                                    <FontIcon iconLiteral="eva-bar-chart-outline"/>
+                                </graphic>
+                            </Button>
+                            <Button mnemonicParsing="false" onAction="#saveChart" styleClass="whiteButton"
+                                    text="Save Image">
+                                <graphic>
+                                    <FontIcon iconLiteral="eva-save-outline"/>
+                                </graphic>
+                            </Button>
+                        </VBox>
+                    </right>
+
+                </BorderPane>
+            </VBox>
+        </HBox>
+    </VBox>
+</HBox>

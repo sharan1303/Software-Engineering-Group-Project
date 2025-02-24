@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Text?>
+<?import java.net.URL?>
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1">
+    <stylesheets>
+        <URL value="@../../css/Global.css" />
+        <URL value="@../../css/MainWindow/MainWindowStyle.css" />
+    </stylesheets>
+    <children>
+        <BorderPane prefHeight="400.0" prefWidth="600.0" styleClass="mainPane" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <top>
+                <Text fx:id="titleText" styleClass="titleTextStyles, textWhite" text="Load Campaign" textAlignment="CENTER" BorderPane.alignment="CENTER">
+                    <BorderPane.margin>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                    </BorderPane.margin></Text>
+
+            </top>
+            <center>
+            <AnchorPane>
+               <children>
+                      <VBox alignment="CENTER" prefHeight="344.0" prefWidth="598.0" styleClass="whiteBG" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <children>
+                              <ProgressIndicator>
+                                  <opaqueInsets>
+                                      <Insets />
+                                  </opaqueInsets>
+                                  <VBox.margin>
+                                      <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                                  </VBox.margin>
+                              </ProgressIndicator>
+                              <Label text="Loading campaign..." />
+                              <Label fx:id="progressLabel" text="Reading file" wrapText="true" />
+                          </children>
+                      </VBox>
+               </children>
+            </AnchorPane>
+            </center>
+        </BorderPane>
+    </children>
+</AnchorPane>

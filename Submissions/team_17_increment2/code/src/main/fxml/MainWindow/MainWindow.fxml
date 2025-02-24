@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Text?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+<?import uk.ac.soton.git.comp2211g17.view.components.Navigation?>
+<?import java.lang.String?>
+<?import java.net.URL?>
+<BorderPane styleClass="mainPane" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="uk.ac.soton.git.comp2211g17.view.main.MainWindow" fx:id="root">
+    <stylesheets>
+        <URL value="@../../css/Global.css"/>
+        <URL value="@../../css/MainWindow/MainWindowStyle.css"/>
+    </stylesheets>
+    <top>
+        <VBox>
+            <MenuBar>
+                <Menu text="Settings">
+                    <Menu text="Define bounce as...">
+                        <fx:define>
+                            <ToggleGroup fx:id="bounceItems"/>
+                        </fx:define>
+                        <RadioMenuItem text="${controller.bounceViewModel.pagesText}" toggleGroup="$bounceItems" onAction="#bouncePages" fx:id="bouncePages" />
+                        <RadioMenuItem text="${controller.bounceViewModel.timeSpentText}" toggleGroup="$bounceItems" onAction="#bounceTime" fx:id="bounceTime" />
+                    </Menu>
+                </Menu>
+            </MenuBar>
+            <HBox styleClass="appBar" BorderPane.alignment="CENTER">
+                <Region HBox.hgrow="NEVER" prefWidth="45"/> <!-- To make the corner empty -->
+                <Text styleClass="titleTextStyles, textWhite" text="Dashboard"/>
+                <Region HBox.hgrow="ALWAYS"/>
+                <Text styleClass="titleTextStyles, textWhite" text="${contentsNavigation.currentTitle}"/>
+                <Region HBox.hgrow="ALWAYS"/>
+
+                <Button onAction="#openSaveDialog" styleClass="blueButton" text="Save Campaign"/>
+                <Button onAction="#openLoaderWindow" styleClass="blueButton" text="Load Campaign"/>
+            </HBox>
+        </VBox>
+    </top>
+    <center>
+        <ScrollPane fitToWidth="true" hbarPolicy="NEVER" BorderPane.alignment="CENTER">
+            <Navigation fx:id="contentsNavigation" defaultPath="homepage">
+                <pages>
+                    <fx:include source="HomePage.fxml"/>
+                    <fx:include source="SideBySidePage.fxml"/>
+                    <fx:include source="DetailViewPage.fxml"/>
+                </pages>
+            </Navigation>
+        </ScrollPane>
+    </center>
+    <left>
+        <VBox styleClass="sidePane" BorderPane.alignment="CENTER">
+            <AnchorPane>
+                <children>
+                    <Button onAction="#navigateHome" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0">
+                        <graphic>
+                            <FontIcon iconLiteral="eva-home-outline"/>
+                        </graphic>
+                        <styleClass>
+                            <String fx:value="blueButton"/>
+                            <String fx:value="icon-big"/>
+                        </styleClass>
+                    </Button>
+                </children>
+                <VBox.margin>
+                    <Insets left="-10.0" right="-10.0"/>
+                </VBox.margin>
+            </AnchorPane>
+            <AnchorPane>
+                <children>
+                    <Button onAction="#navigateSideToSide" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0">
+                        <graphic>
+                            <FontIcon iconLiteral="eva-layout-outline"/>
+                        </graphic>
+                        <styleClass>
+                            <String fx:value="blueButton"/>
+                            <String fx:value="icon-big"/>
+                        </styleClass>
+                    </Button>
+                </children>
+                <VBox.margin>
+                    <Insets left="-10.0" right="-10.0"/>
+                </VBox.margin>
+            </AnchorPane>
+<!--            <AnchorPane>-->
+<!--                <children>-->
+<!--                    <Button AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0">-->
+<!--                        <graphic>-->
+<!--                            <FontIcon iconLiteral="eva-settings-outline"/>-->
+<!--                        </graphic>-->
+<!--                        <styleClass>-->
+<!--                            <String fx:value="blueButton"/>-->
+<!--                            <String fx:value="icon-big"/>-->
+<!--                        </styleClass>-->
+<!--                    </Button>-->
+<!--                </children>-->
+<!--                <VBox.margin>-->
+<!--                    <Insets left="-10.0" right="-10.0"/>-->
+<!--                </VBox.margin>-->
+<!--            </AnchorPane>-->
+        </VBox>
+    </left>
+</BorderPane>

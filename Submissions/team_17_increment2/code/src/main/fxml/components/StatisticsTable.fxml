@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.VBox?>
+<fx:root xmlns="http://javafx.com/javafx"
+		 xmlns:fx="http://javafx.com/fxml"
+		 fx:controller="uk.ac.soton.git.comp2211g17.view.components.table.StatisticsTable" type="VBox">
+	<Label fx:id="title" styleClass="subtitle"/>
+	<!--	Todo remove the label! We don't need it	-->
+	<GridPane fx:id="contents" styleClass="grid-pane, smallMargin"/>
+</fx:root>

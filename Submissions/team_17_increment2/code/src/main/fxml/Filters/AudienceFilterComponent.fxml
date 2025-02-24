@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import org.controlsfx.control.*?>
+<?import org.kordamp.ikonli.javafx.*?>
+
+<fx:root prefHeight="60.0" prefWidth="Infinity" stylesheets="@../../css/MainWindow/MainWindowStyle.css" type="javafx.scene.layout.BorderPane" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="uk.ac.soton.git.comp2211g17.view.components.filters.AudienceFilterComponent">
+    <stylesheets>
+        <URL value="@../../css/MainWindow/MainWindowStyle.css" />
+        <URL value="@../../css/Global.css" />
+    </stylesheets>
+
+    <center>
+        <HBox spacing="10" styleClass="smallMargin">
+            <VBox alignment="CENTER" HBox.hgrow="ALWAYS"><Text fx:id="title" styleClass="textBlue" text="Placeholder" /></VBox>
+
+            <Button mnemonicParsing="false" styleClass="whiteButton" onAction="#disableFilter">
+                <graphic>
+                    <FontIcon fx:id="buttonIcon" iconLiteral="eva-close-circle-outline" styleClass="blueIcon" />
+                </graphic>
+            </Button>
+            <CheckComboBox fx:id="choiceBox" minWidth="200" maxWidth="200" prefHeight="35" styleClass="choice-box" />
+        </HBox>
+    </center>
+</fx:root>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import org.controlsfx.control.*?>
+<?import org.kordamp.ikonli.javafx.*?>
+
+<AnchorPane stylesheets="@../../css/Global.css" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="uk.ac.soton.git.comp2211g17.viewmodel.filters.ContextFilterViewModel">
+    <children>
+        <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" style="-fx-text-fill: rgba(63,160,251,1);" styleClass="title" text="Context" AnchorPane.leftAnchor="7.0" AnchorPane.topAnchor="7.0">
+            <graphic>
+                <FontIcon iconLiteral="eva-menu-2-outline" styleClass="textBlue" />
+            </graphic>
+        </Label>
+        <CheckComboBox fx:id="choiceBox" maxWidth="200" minWidth="200" prefHeight="35" styleClass="choice-box" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="42.0" />
+    </children>
+</AnchorPane>

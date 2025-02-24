@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.*?>
+<?import uk.ac.soton.git.comp2211g17.view.components.async.FutureIndicatorContainer?>
+<?import uk.ac.soton.git.comp2211g17.view.components.graph.TimeGraph?>
+<?import uk.ac.soton.git.comp2211g17.view.components.*?>
+<?import uk.ac.soton.git.comp2211g17.view.components.table.DataTable?>
+<?import java.net.URL?>
+<Navigation.Page xmlns="http://javafx.com/javafx"
+                 xmlns:fx="http://javafx.com/fxml"
+                 path="detail"
+                 fx:controller="uk.ac.soton.git.comp2211g17.view.main.DetailViewPage"
+                 fx:id="root"
+                 title="Detail View">
+    <VBox styleClass="whiteBG">
+        <stylesheets>
+            <URL value="@../../css/MainWindow/MainWindowStyle.css"/>
+            <URL value="@../../css/Global.css"/>
+        </stylesheets>
+        <HBox>
+            <VBox HBox.hgrow="ALWAYS">
+                <FutureIndicatorContainer indicator="${controller.timeGraphViewModel.futureIndicator}">
+                    <TimeGraph data="${controller.timeGraphViewModel.data}" title="${controller.metric.name}"
+                               xlabel="${controller.timeGraphViewModel.xlabel}"
+                               ylabel="${controller.timeGraphViewModel.ylabel}" HBox.hgrow="ALWAYS"
+                               styleClass="smallMargin"/>
+                </FutureIndicatorContainer>
+                <BorderPane VBox.vgrow="ALWAYS">
+                    <VBox.margin>
+                        <Insets bottom="10.0" left="10.0"/>
+                    </VBox.margin>
+                    <center>
+                        <Label styleClass="title" text="${controller.metric.name}">
+                            <padding>
+                                <Insets left="10.0" right="10.0"/>
+                            </padding>
+                        </Label>
+                    </center>
+                </BorderPane>
+                <!--                    Graph Descriptor here -->
+            </VBox>
+            <BorderPane HBox.hgrow="ALWAYS" styleClass="print-hidden">
+                <top>
+                    <VBox styleClass="hbox">
+                        <Label styleClass="title" text="Filters">
+                            <padding>
+                                <Insets left="10.0" right="10.0"/>
+                            </padding>
+                        </Label>
+                    </VBox>
+                </top>
+                <center>
+                    <fx:include source ="../Filters/FilterGroup.fxml" fx:id="filterGroup"/>
+                </center>
+<!--                        <Button styleClass="whiteButton, smallMargin" text="Audience" onAction="#audienceButtonClicked"/>-->
+
+<!--                        <Button styleClass="whiteButton, smallMargin" text="Context" onAction="#contextButtonClicked"/>-->
+
+<!--                        <Button styleClass="whiteButton, smallMargin" text="Date" onAction="#dateButtonClicked" />-->
+
+<!--                        <Button styleClass="whiteButton, smallMargin" text="Audience Gender"/>-->
+
+<!--                        <Button styleClass="whiteButton, smallMargin" text="Audience Income"/>-->
+
+
+
+                <bottom>
+                    <fx:include source="../TimeGranularity.fxml" fx:id="timeGranularity"/>
+                </bottom>
+<!--                <center>-->
+<!--                    <Region style="-fx-border-color: rgba(63, 160, 251, 1); -fx-border-width: 5; -fx-border-radius: 10;">-->
+<!--                        <padding>-->
+<!--                            <Insets top="10.0"/>-->
+<!--                        </padding>-->
+<!--                        <BorderPane.margin>-->
+<!--                            <Insets left="10.0" right="10.0" top="10.0"/>-->
+<!--                        </BorderPane.margin>-->
+<!--                    </Region>-->
+<!--                </center>-->
+            </BorderPane>
+        </HBox>
+        <DataTable fx:id="table" styleClass="smallMargin, print-hidden"/>
+    </VBox>
+</Navigation.Page>

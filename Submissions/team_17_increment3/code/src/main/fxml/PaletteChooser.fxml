@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="700.0" styleClass="whiteBG" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="uk.ac.soton.git.comp2211g17.view.PaletteChooser">
+         <stylesheets>
+            <URL value="@../css/MainWindow/MainWindowStyle.css" />
+            <URL value="@../css/Global.css" />
+         </stylesheets>
+         <BorderPane fx:id="root" prefHeight="400.0" prefWidth="600.0" styleClass="mainPane" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <top>
+               <Text fx:id="titleText" styleClass="titleTextStyles, textWhite" text="Palette chooser" textAlignment="CENTER" BorderPane.alignment="CENTER">
+                  <BorderPane.margin>
+                     <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                  </BorderPane.margin>
+               </Text>
+
+            </top>
+            <bottom>
+               <GridPane prefHeight="60.0" prefWidth="600.0" styleClass="whiteBG" BorderPane.alignment="CENTER">
+                  <columnConstraints>
+                     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  </columnConstraints>
+                  <rowConstraints>
+                     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  </rowConstraints>
+                  <children>
+                     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="47.0" prefWidth="598.0">
+                        <children>
+                           <HBox alignment="CENTER" layoutY="14.0" prefHeight="26.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="7.0" AnchorPane.topAnchor="0.0">
+                              <children>
+                                 <Button mnemonicParsing="false" onAction="#setPalette" styleClass="blueButton" text="Confirm" />
+                                 <Button mnemonicParsing="false" onAction="#cancel" styleClass="whiteButton" text="Cancel">
+                              <HBox.margin>
+                                 <Insets left="7.0" />
+                              </HBox.margin></Button>
+                              </children>
+                           </HBox>
+                        </children>
+                     </AnchorPane>
+                  </children>
+               </GridPane>
+            </bottom>
+      <center>
+         <GridPane styleClass="whiteBG" BorderPane.alignment="CENTER">
+           <columnConstraints>
+             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+           </columnConstraints>
+           <rowConstraints>
+             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+           </rowConstraints>
+            <children>
+               <VBox fx:id="zesty" alignment="CENTER" fillWidth="false" onMouseClicked="#zestyClicked" HBox.hgrow="ALWAYS">
+                  <children>
+                     <HBox prefHeight="100" prefWidth="100" style="-fx-border-color: black;">
+                        <children>
+                           <VBox style="-fx-background-color: white;" HBox.hgrow="ALWAYS" />
+                           <VBox style="-fx-background-color: rgba(63, 160, 251, 1);" HBox.hgrow="ALWAYS" />
+                           <VBox style="-fx-background-color: rgba(242, 97, 45, 1);" HBox.hgrow="ALWAYS" />
+                           <VBox style="-fx-background-color: rgba(251, 167, 27, 1);" HBox.hgrow="ALWAYS" />
+                        </children>
+                     </HBox>
+                     <Label text="Zesty (default)" textAlignment="CENTER" wrapText="true" />
+                  </children>
+               </VBox>
+               <VBox fx:id="elegant" alignment="CENTER" fillWidth="false" onMouseClicked="#elegantClicked" GridPane.columnIndex="1" HBox.hgrow="ALWAYS">
+                  <children>
+                     <HBox prefHeight="100" prefWidth="100" style="-fx-border-color: black;">
+                        <children>
+                           <VBox style="-fx-background-color: rgba(210, 210, 210, 1);" HBox.hgrow="ALWAYS" />
+                           <VBox style="-fx-background-color: rgba(50, 50, 50, 1);" HBox.hgrow="ALWAYS" />
+                           <VBox style="-fx-background-color: rgba(175, 194, 200, 1);" HBox.hgrow="ALWAYS" />
+                           <VBox style="-fx-background-color: rgba(202, 190, 162, 1);" HBox.hgrow="ALWAYS" />
+                        </children>
+                     </HBox>
+                     <Label text="Elegant" textAlignment="CENTER" wrapText="true" />
+                  </children>
+               </VBox>
+               <VBox fx:id="corporate" alignment="CENTER" fillWidth="false" onMouseClicked="#corporateClicked" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER" HBox.hgrow="ALWAYS">
+                  <children>
+                     <HBox prefHeight="100" prefWidth="100" style="-fx-border-color: black;">
+                        <children>
+                           <VBox style="-fx-background-color: white;" HBox.hgrow="ALWAYS" />
+                           <VBox style="-fx-background-color: rgba(188, 184, 174, 1);" HBox.hgrow="ALWAYS" />
+                           <VBox style="-fx-background-color: rgba(200, 212, 223, 1);" HBox.hgrow="ALWAYS" />
+                           <VBox style="-fx-background-color: rgba(78, 116, 153, 1);" HBox.hgrow="ALWAYS" />
+                        </children>
+                     </HBox>
+                     <Label text="Corporate (colourblind)" textAlignment="CENTER" textOverrun="CLIP" wrapText="true" />
+                  </children>
+               </VBox>
+               <VBox fx:id="retro" alignment="CENTER" fillWidth="false" onMouseClicked="#retroClicked" GridPane.columnIndex="3" HBox.hgrow="ALWAYS">
+                  <children>
+                     <HBox prefHeight="100" prefWidth="100" style="-fx-border-color: black;">
+                        <children>
+                           <VBox style="-fx-background-color: white;" HBox.hgrow="ALWAYS" />
+                           <VBox style="-fx-background-color: rgba(88, 32, 72, 1);" HBox.hgrow="ALWAYS" />
+                           <VBox style="-fx-background-color: rgba(220, 81, 60, 1);" HBox.hgrow="ALWAYS" />
+                           <VBox style="-fx-background-color: rgba(116, 170, 188, 1);" HBox.hgrow="ALWAYS" />
+                        </children>
+                     </HBox>
+                     <Label text="Retro (colourblind)" textAlignment="CENTER" wrapText="true" />
+                  </children>
+               </VBox>
+            </children>
+         </GridPane>
+      </center>
+         </BorderPane>
+      </AnchorPane>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.net.URL?>
+<BorderPane prefHeight="270.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="uk.ac.soton.git.comp2211g17.view.PrintDialog" styleClass="zesty, whiteBG">
+    <stylesheets>
+        <URL value="@../css/MainWindow/MainWindowStyle.css" />
+        <URL value="@../css/Global.css" />
+    </stylesheets>
+    <bottom>
+        <ButtonBar BorderPane.alignment="CENTER">
+            <buttons>
+                <Button mnemonicParsing="false" onAction="#close" styleClass="whiteButton" text="Cancel" />
+                <Button mnemonicParsing="false" onAction="#print" styleClass="whiteButton" text="Print" />
+            </buttons>
+            <padding>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+            </padding>
+        </ButtonBar>
+    </bottom>
+    <center>
+        <VBox BorderPane.alignment="CENTER">
+            <GridPane>
+                <columnConstraints>
+                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="276.0" minWidth="10.0" prefWidth="93.0" />
+                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="352.0" minWidth="10.0" prefWidth="308.0" />
+                </columnConstraints>
+                <rowConstraints>
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                </rowConstraints>
+                <Label text="Report Title" GridPane.halignment="CENTER" />
+                <TextField fx:id="titleField" GridPane.columnIndex="1">
+                    <GridPane.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                    </GridPane.margin>
+                </TextField>
+            <VBox.margin>
+               <Insets bottom="5.0" left="5.0" right="5.0" top="15.0" />
+            </VBox.margin>
+            </GridPane>
+            <GridPane>
+                <columnConstraints>
+                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="340.0" minWidth="10.0" prefWidth="287.0" />
+                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="197.0" minWidth="10.0" prefWidth="114.0" />
+                </columnConstraints>
+                <rowConstraints>
+                    <RowConstraints />
+                    <RowConstraints />
+                </rowConstraints>
+                <Label text="${controller.pageSizeLabelText}" GridPane.rowIndex="1">
+                    <GridPane.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                    </GridPane.margin>
+                </Label>
+                <Button mnemonicParsing="false" onAction="#configureButton" styleClass="whiteButton" text="Configure..." GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="0">
+                    <GridPane.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                    </GridPane.margin>
+                </Button>
+                <Button mnemonicParsing="false" onAction="#pageSetupButton" styleClass="whiteButton" text="Page Setup..." GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+                    <GridPane.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                    </GridPane.margin>
+                </Button>
+                <Label text="${controller.printerLabelText}" GridPane.rowIndex="0">
+                    <GridPane.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                    </GridPane.margin>
+                </Label>
+            </GridPane>
+        </VBox>
+    </center>
+</BorderPane>
